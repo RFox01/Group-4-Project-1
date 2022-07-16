@@ -1,52 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Marvel</title>
-    <meta charset="UTF-8" />
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="#" />
-    <!--CSS-->
-    <link rel="stylesheet" href="#" />
-    <!-- google font-->
-    <link rel="stylesheet" href="#" />
-    <!--font awesome icon, if applicable-->
-  </head>
-  <body>
-    <!-- Navbar -->
-    <div class="navbar">
-      <div class="bar-item">
-        <a class="#"></a>
-        <a href="#" class="main-bar-item">Home</a>
-        <a href="#" class="about-bar-item">About</a>
-      </div>
-
-      <!-- Header -->
-      <header class="container">
-        <h1>The Team behind Marvel Mystery Matcher</h1>
-      </header>
-
-<!-- main content with 4 cards, one for each in 2 columns and 2 rows -->
-<div class="row"></div>
-<div class="col"></div>
-<div class="card"></div>
-<h2>Sam</h2>
-<img src="" alt=""/> 
-<p></p>
-<div class="col"></div>
-<h2>Rosa</h2>
-<div class="card"></div>
-<img src="" alt=""/> 
-<p></p>
-<div class="row"></div>
-<div class="col"></div>
-<h2>Charles</h2>
-<div class="card"></div>
-<img src="" alt=""/> 
-<p></p>
-<div class="col"></div>
-<h2>Appoline</h2>
-<div class="card"></div>
-<img src="" alt=""/> 
-<p></p>
-  </body>
+    <title>My first Bulma website</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+<body class="is-family-monospace">
+    <nav
+    class="navbar has-background-dark p-2 has-text-weight-semibold"
+    role="navigation"
+    aria-label="main navigation"
+    >
+    <div class="navbar-brand">
+        <div class="navbar-item has-text-white is-size-3">
+            Marvel Mystery Matcher
+        </div>
+        <a
+        role="button"
+        class="navbar-burger"
+        aria-label="menu"
+        aria-expanded="false"
+        >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+    </a>
+</div>
+<div id="navbar" class="navbar-menu">
+    <div class="navbar-end">
+        <div class="navbar-item">
+            <a class="navbar-item has-text-white is-size-4" href="./index.html"> Home </a>
+            <a class="navbar-item has-text-white is-size-4" href="./about.html"> About </a>
+        </div>
+    </div>
+</div>
+</nav>
+<figure class="image">
+    <img src="./assets/images/marvel-fresh-start-banner.jpeg" />
+</figure>
+<div class="content is-large has-text-centered mt-6">
+    <h1>Meet the <span class="has-text-danger-dark">Team</span></h1>
+</div>
+<section class="section">
+    <div class="columns is-mobile">
+        <div class="column is-8 is-offset-2">
+            <div class="columns">
+                <div class="column is-6 m-1">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title has-text-danger-dark">Rosa</p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column is-6 m-1">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-4by3">
+                                <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="content">
+                                <p class="title has-text-danger-dark">Charles</p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Phasellus nec iaculis mauris.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="columns is-mobile">
+    <div class="column is-8 is-offset-2">
+        <div class="columns">
+            <div class="column is-6 m-1">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <p class="title has-text-danger-dark">Sam</p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="column is-6 m-1">
+                <div class="card">
+                    <div class="card-image">
+                        <figure class="image is-4by3">
+                            <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                        </figure>
+                    </div>
+                    <div class="card-content">
+                        <div class="content">
+                            <p class="title has-text-danger-dark">Appoline</p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Phasellus nec iaculis mauris.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+<script type="text/javascript" src="lib/main.js"></script>
+</body>
 </html>
