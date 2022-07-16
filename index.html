@@ -1,28 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<title>Marvel</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href=#> <!--CSS-->
-<link rel="stylesheet" href=#> <!-- google font-->
-<link rel="stylesheet" href=#> <!--font awesome icon, if applicable-->
-
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marvel Mystery Matcher</title>
+  <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
-<body>
-
-<!-- Navbar -->
-<div class="navbar">
-  <div class="bar-item">
-    <a class="#"></a>
-    <a href="#" class="main-bar-item">Home</a>
-    <a href="#" class="about-bar-item">About</a>
+<body class="is-family-monospace">
+  <nav
+  class="navbar has-background-dark p-2 has-text-weight-semibold"
+  role="navigation"
+  aria-label="main navigation"
+  >
+  <div class="navbar-brand">
+    <div class="navbar-item has-text-white is-size-3">
+      Marvel Mystery Matcher
+    </div>
+    <a
+    role="button"
+    class="navbar-burger"
+    aria-label="menu"
+    aria-expanded="false"
+    >
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+</div>
+<div id="navbar" class="navbar-menu">
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <a class="navbar-item has-text-white is-size-4" href="./index.html">
+        Home
+      </a>
+      <a class="navbar-item has-text-white is-size-4" href="./about.html">
+        About
+      </a>
+    </div>
   </div>
-
-
-<!-- Container -->
-<header class="container">
-  <h1 class="margin jumbo">Marvel Mystery Matcher</h1>
-  <p>CATCHY DESCRIPTION OF APP!!!!</p>
-  <img class="image" src="#">
-  <button class="btn">Get Started</button>
+</div>
+</nav>
+<figure class="image">
+  <img src="./assets/images/marvel-fresh-start-banner.jpeg" />
+</figure>
+<section class="section is-small mt-4">
+  <div class="columns is-mobile">
+    <div class="column is-10 is-offset-1">
+      <div class="container">
+        <div class="card">
+          <div class="card-content">
+            <div class="content">
+              <h1 class="title has-text-centered mt-3">
+                Find out which
+                <span class="has-text-danger-dark">SuperHero</span> you are
+              </h1>
+              <p class="has-text-centered mt-8">
+                AS A user, I want to find out which Marvel comic I should
+                read I WANT an app that will choose which hero or villian I
+                would like SO THAT I can decide which comic to read
+              </p>
+              <div class="columns has-text-centered">
+                <div class="column is-4 is-offset-4">
+                  <img
+                  src="./assets/images/deadpool.jpg"
+                  alt="Placeholder image"
+                  class="my-5"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="buttons is-centered my-6">
+    <button class="button is-large is-danger is-rounded is-outlined">
+      Get Started
+    </button>
+  </div>
+</section>
+<script type="text/javascript" src="lib/main.js"></script>
+</body>
+</html>

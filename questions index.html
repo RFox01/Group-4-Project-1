@@ -1,30 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Marvel Mystery Matcher</title>
-    <link rel="stylesheet" href="#"/>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marvel Mystery Matcher</title>
+  <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
-
-<body>
-    <nav class = "navbar">
-            <div class = "bar-item">
-                <a href="#" class="main-bar-item">Home</a>
-                <a href="#" class="about-bar-item">About</a>
+<body class="is-family-monospace">
+  <nav
+  class="navbar has-background-dark p-2 has-text-weight-semibold"
+  role="navigation"
+  aria-label="main navigation"
+  >
+  <div class="navbar-brand">
+    <div class="navbar-item has-text-white is-size-3">
+      Marvel Mystery Matcher
+    </div>
+    <a
+    role="button"
+    class="navbar-burger"
+    aria-label="menu"
+    aria-expanded="false"
+    >
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+  </a>
+</div>
+<div id="navbar" class="navbar-menu">
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <a class="navbar-item has-text-white is-size-4" href="./index.html"> Home </a>
+      <a class="navbar-item has-text-white is-size-4" href="./about.html"> About </a>
+    </div>
+  </div>
+</div>
+</nav>
+<figure class="image">
+  <img src="./assets/images/marvel-fresh-start-banner.jpeg" />
+</figure>
+<section class="section mt-2">
+  <div class="content is-large has-text-centered mt-6">
+    <h1>Questions</h1>
+  </div>
+  <div class="content">
+    <h2 class="has-text-centered my-6">
+      Question 1: Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Modi temporibus fugit fugiat?
+    </h2>
+    <div class="columns is-mobile">
+      <div class="column is-12 ">
+        <div class="columns">
+          <div class="column is-4">
+            <div class="card has-background-danger-dark">
+              <div class="card-image p-3">
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
             </div>
-    </nav>
-
-    <header>
-        <h1>Marvel Mystery Matcher</h1>
-    </header>
-
-    <!-- Questions -->
-    <section class="question-ask">
-        <h2>1. ADD QUESTION HERE</h2>
-        <img class="image-main" src="./assets/images/250x250.png" alt="placeholder image 250x250 px height and width dimensions">
-        <img class="image-main" src="./assets/images/250x250.png" alt="placeholder image 250x250 px height and width dimensions">
-        <img class="image-main" src="./assets/images/250x250.png" alt="placeholder image 250x250 px height and width dimensions">
-    </section>
+          </div>
+          <div class="column is-4">
+            <div class="card has-background-danger-dark">
+              <div class="card-image p-3">
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+            </div>
+          </div>
+          <div class="column is-4">
+            <div class="card has-background-danger-dark">
+              <div class="card-image p-3">
+                <figure class="image is-4by3">
+                  <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="lib/main.js"></script>
 </body>
+</html>
