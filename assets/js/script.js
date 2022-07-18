@@ -4,6 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //add toggle for burger menu 
 
+// Linking 'Get Started' button to questions page when clicked
+var getStartedBtn = document.getElementById("getStartedId");
+getStartedBtn.addEventListener("click", function() {
+  location.href = "./questions index.html";
+}) 
+
 // create an array of questions
 var questions = [
   {
