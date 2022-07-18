@@ -48,11 +48,27 @@ function question7() {
 
 choiceA.addEventListener("click", function() {
     finalScore.push(0);
+    nextQuestion();
 });
 
 choiceB.addEventListener("click", function() {
     finalScore.push(1);
+    nextQuestion();
 });
 
-
 question1();
+
+function nextQuestion() {
+if (finalScore === [0]) {
+    question2();
+} else if (finalScore === [1]) {
+    question3();
+} else if (finalScore === [0, 0]) {
+    question4();
+} else if (finalScore === [0, 1]) {
+    question5();
+} else if (finalScore === [1, 0]) {
+    question6();
+} else if (finalScore === [1, 1]) {
+    question7();
+}};
