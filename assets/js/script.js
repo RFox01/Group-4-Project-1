@@ -1,3 +1,6 @@
+// loading the DOM to initialise Barba animation
+// window.addEventListener('load', (Barba.Pjax.start()));
+
 document.addEventListener("DOMContentLoaded", () => {
   console.log("Hello Bulma!");
 });
@@ -98,3 +101,33 @@ function displayScore() {
   scoreElement.innerHTML =
     "Your score is " + currentScore + " out of " + questions.length;
 }
+
+// BARBA JS ANIMATION ADDED TOP OF script.js
+// ADD IF NOT LOADING: 
+// window.addEventListener('load', Barba.Pjax.start());
+
+ /* var FadeTransition = Barba.BaseTransition.extend({
+  start: function() {
+
+  Promise
+  .all([this.newContainerLoading, this.fadeOut()])
+  .then(this.fadeIn.bind(this));
+  },
+
+  fadeOut: function() {
+  },
+
+  fadeIn: function() {
+    this.newContainer.classList.add("slide-in");
+    var that = this;
+    this.newContainer.addEventListener("animationend", function() {
+      that.newContainer.classList.remove("slide-in");
+      that.done();
+    });
+  }
+});
+
+Barba.Pjax.getTransition = function() {
+
+  return FadeTransition;
+} */
