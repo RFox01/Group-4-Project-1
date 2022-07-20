@@ -54,14 +54,23 @@
           <div class="columns">
             <!-- another column wihtin the column that holds the card with the result -->
             <div class="column is-6">
-              <figure class="image is-4by3 mt-5">
-                <img src="./assets/images/captainMarvel.jpg" alt="" />
+              <!-- image of the matched character -->
+              <figure class="image is-4by3 mt-1">
+                <img
+                  src="./assets/images/captainMarvel.jpg"
+                  alt=""
+                  id="characterImage"
+                />
               </figure>
             </div>
             <div class="column is-6">
-              <div class="box has-background-danger-dark mt-5">
+              <div class="box has-background-danger-dark mt-3">
                 <div class="content">
-                  <h1 class="title has-text-white has-text-centered">
+                  <!-- result of the match -->
+                  <h1
+                    class="title has-text-white has-text-centered"
+                    id="character"
+                  >
                     Captain Marvel
                   </h1>
                 </div>
@@ -70,7 +79,7 @@
                 <div class="card-content has-text-centered">
                   <div class="content">
                     <!-- description of the characther -->
-                    <p class="subtitle has-text-centered mb-6">
+                    <p class="subtitle has-text-centered mb-6" id="description">
                       Superhuman strength, stamina, durability, and agility.
                       Captain Marvel can also fly at great speeds, well beyond
                       the sound barrier. Captain Marvel also has something
@@ -82,7 +91,7 @@
                   <button
                     class="button is-large is-danger is-rounded is-outlined mb-5"
                   >
-                    More info/ wiki link
+                    Read More
                   </button>
                   <div id="modal-js-example" class="modal">
                     <div class="modal-background"></div>
@@ -90,7 +99,6 @@
                     <div class="modal-content">
                       <div class="box">
                         <p>Modal JS example</p>
-                        <!-- Your content -->
                       </div>
                     </div>
 
@@ -103,7 +111,7 @@
                     class="js-modal-trigger button is-large is-danger is-rounded is-outlined"
                     data-target="modal-js-example"
                   >
-                    Open Movie info
+                    Get Movie Info
                   </button>
                 </div>
               </div>
