@@ -19,31 +19,31 @@ function question2() {
 };
 
 function question3() {
-    question.innerHTML = "Speed or Power?";
+    question.innerHTML = "Intelligence or Charisma?";
     choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
     choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
 };
 
 function question4() {
-    question.innerHTML = "Flight or Super Strength?";
+    question.innerHTML = "Super Speed or Magic?";
     choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
     choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
 };
 
 function question5() {
-    question.innerHTML = "Flight or Super Strength?";
+    question.innerHTML = "Regeneration or Bullet Proof Skin?";
     choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
     choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
 };
 
 function question6() {
-    question.innerHTML = "Flight or Super Strength?";
+    question.innerHTML = "Wealth or Martial Skill?";
     choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
     choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
 };
 
 function question7() {
-    question.innerHTML = "Flight or Super Strength?";
+    question.innerHTML = "Espionage or Honour?";
     choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
     choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
 };
@@ -87,6 +87,31 @@ question1();
         question6();
     } else if (finalScore === '11') {
         question7();
-    }};
-    
+    } else if (finalScore === '000') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '001') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '010') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '011') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '100') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '101') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '110') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    } else if (finalScore === '111') {
+        localStorage.setItem("finalScore", finalScore);
+        location.href = "./ending.html";
+    }
+};
+
 console.log(finalScore);
