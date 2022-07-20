@@ -53,9 +53,9 @@
         <div class="column is-12">
           <div class="columns">
             <!-- another column wihtin the column that holds the card with the result -->
-            <div class="column is-6">
+            <div class="column is-5">
               <!-- image of the matched character -->
-              <figure class="image is-4by3 mt-1">
+              <figure class="image is-4by3">
                 <img
                   src="./assets/images/captainMarvel.jpg"
                   alt=""
@@ -63,23 +63,19 @@
                 />
               </figure>
             </div>
-            <div class="column is-6">
-              <div class="box has-background-danger-dark mt-3">
-                <div class="content">
-                  <!-- result of the match -->
-                  <h1
-                    class="title has-text-white has-text-centered"
-                    id="character"
-                  >
-                    Captain Marvel
-                  </h1>
-                </div>
-              </div>
+            <div class="column is-7">
               <div class="card">
                 <div class="card-content has-text-centered">
                   <div class="content">
+                    <!-- result of the match -->
+                    <h1
+                      class="title has-text-centered has-text-danger-dark"
+                      id="character"
+                    >
+                      You are ... Captain Marvel!
+                    </h1>
                     <!-- description of the character -->
-                    <p class="subtitle has-text-centered mb-6" id="description">
+                    <p class="subtitle has-text-centered m-3" id="description">
                       Superhuman strength, stamina, durability, and agility.
                       Captain Marvel can also fly at great speeds, well beyond
                       the sound barrier. Captain Marvel also has something
@@ -88,17 +84,41 @@
                       hallucinations of incoming threats.
                     </p>
                   </div>
+                  <!-- this will redirect to the wikipedia page with the api fetch -->
                   <button
-                    class="button is-large is-danger is-rounded is-outlined mb-5"
+                    class="button is-large is-danger is-rounded is-outlined m-3"
                   >
                     Read More
                   </button>
                   <button
-                    class="js-modal-trigger button is-large is-danger is-rounded is-outlined"
+                    class="js-modal-trigger button is-large is-danger is-rounded is-outlined m-3"
+                    id="modal-btn"
                     data-target="modal-js-example"
                   >
                     Get Movie Info
                   </button>
+                  <!-- this is the modal that will open up with the movie info fetch from omdb -->
+                  <div class="modal" id="modal-movies">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title" id="movie-title"></p>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                        <p class="image is-4by3">
+                          <img
+                            src="https://bulma.io/images/placeholders/1280x960.png"
+                            alt="marvel character"
+                            id="poster"
+                          />
+                        </p>
+                        <p class="is-size-4 has-text-left m-3" id="actors"></p>
+                        <p class="is-size-4 has-text-left m-3" id="awards"></p>
+                        <p class="is-size-4 has-text-left m-3" id="ratings"></p>
+                      </section>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,23 +126,6 @@
         </div>
       </div>
     </section>
-    <div class="modal" id="modalMovies">
-      <div class="modal-background"></div>
-      <div class="modal-card">
-        <header class="modal-card-head">
-          <p class="modal-card-title">Modal title</p>
-          <button class="delete" aria-label="close"></button>
-        </header>
-        <section class="modal-card-body">
-          <p class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt=""
-            />
-          </p>
-        </section>
-      </div>
-    </div>
     <script type="text/javascript" src="./assets/js/end.js"></script>
   </body>
 </html>
