@@ -1,87 +1,117 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Marvel Mystery Matcher</title>
-  <link rel="stylesheet" href="./assets/css/main.css" />
-</head>
-<body class="is-family-monospace">
-  <!-- this is the navbar element -->
-  <nav
-  class="navbar has-background-dark p-2 has-text-weight-semibold"
-  role="navigation"
-  aria-label="main navigation"
-  >
-  <div class="navbar-brand">
-    <div class="navbar-item has-text-white is-size-3">
-      Marvel Mystery Matcher
-    </div>
-    <!-- this is the burger menu elements -->
-    <a
-    role="button"
-    class="navbar-burger"
-    aria-label="menu"
-    aria-expanded="false"
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Marvel Mystery Matcher</title>
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+  <body class="is-family-monospace">
+    <!-- this is the navbar element -->
+    <nav
+      class="navbar has-background-dark p-2 has-text-weight-semibold"
+      role="navigation"
+      aria-label="main navigation"
     >
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-    <span aria-hidden="true"></span>
-  </a>
-</div>
-<div id="navbar" class="navbar-menu">
-  <div class="navbar-end">
-    <div class="navbar-item">
-      <a class="navbar-item has-text-white is-size-4" href="./index.html">
-        Home
-      </a>
-      <a class="navbar-item has-text-white is-size-4" href="./about.html">
-        About
-      </a>
-    </div>
-  </div>
-</div>
-</nav>
-<!-- this is the banner -->
-<figure class="image">
-  <img src="./assets/images/marvel-fresh-start-banner.jpeg" />
-</figure>
-<!-- this is the main section with a centered column  -->
-<section class="section is-small mt-4">
-  <div class="content">
-    <h1 class="title has-text-danger-dark has-text-centered">
-      We have a match!
-    </h1>
-  </div>
-  <div class="columns is-mobile">
-    <div class="column is-10 is-offset-1">
-      <div class="columns">
-        <!-- another column wihtin the column that holds the card with the result -->
-        <div class="column is-6">
-          <figure class="image is-4by3 mt-5">
-            <img
-            src="https://bulma.io/images/placeholders/1280x960.png"
-            alt="Placeholder image"
-            />
-          </figure>
+      <div class="navbar-brand">
+        <div class="navbar-item has-text-white is-size-3">
+          Marvel Mystery Matcher
         </div>
-        <div class="column is-6">
-          <div class="content">
-            
-            <!-- description of the characther -->
-            <p class="subtitle mt-5">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Phasellus nec iaculis mauris.
-            </p>
-            <p class="subtitle  ">list of links below</p>
+        <!-- this is the burger menu elements -->
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-menu">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="navbar-item has-text-white is-size-4" href="./index.html">
+              Home
+            </a>
+            <a class="navbar-item has-text-white is-size-4" href="./about.html">
+              About
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
-</section>
-<script type="text/javascript" src="lib/main.js"></script>
-</body>
+    </nav>
+    <!-- this is the banner -->
+    <figure class="image">
+      <img src="./assets/images/marvel-fresh-start-banner.jpeg" />
+    </figure>
+    <!-- this is the main section with a centered column  -->
+    <section class="section is-small mt-4">
+      <div class="columns is-mobile">
+        <div class="column is-12">
+          <div class="columns">
+            <!-- another column wihtin the column that holds the card with the result -->
+            <div class="column is-6">
+              <figure class="image is-4by3 mt-5">
+                <img src="./assets/images/captainMarvel.jpg" alt="" />
+              </figure>
+            </div>
+            <div class="column is-6">
+              <div class="box has-background-danger-dark mt-5">
+                <div class="content">
+                  <h1 class="title has-text-white has-text-centered">
+                    Captain Marvel
+                  </h1>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-content has-text-centered">
+                  <div class="content">
+                    <!-- description of the characther -->
+                    <p class="subtitle has-text-centered mb-6">
+                      Superhuman strength, stamina, durability, and agility.
+                      Captain Marvel can also fly at great speeds, well beyond
+                      the sound barrier. Captain Marvel also has something
+                      called a “Seventh Sense” where she can sense danger. This
+                      has also been known to give her pre-cognitive
+                      hallucinations of incoming threats.
+                    </p>
+                  </div>
+                  <button
+                    class="button is-large is-danger is-rounded is-outlined mb-5"
+                  >
+                    More info/ wiki link
+                  </button>
+                  <div id="modal-js-example" class="modal">
+                    <div class="modal-background"></div>
+
+                    <div class="modal-content">
+                      <div class="box">
+                        <p>Modal JS example</p>
+                        <!-- Your content -->
+                      </div>
+                    </div>
+
+                    <button
+                      class="modal-close is-large"
+                      aria-label="close"
+                    ></button>
+                  </div>
+                  <button
+                    class="js-modal-trigger button is-large is-danger is-rounded is-outlined"
+                    data-target="modal-js-example"
+                  >
+                    Open Movie info
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script type="text/javascript" src="lib/main.js"></script>
+  </body>
 </html>
