@@ -40,7 +40,7 @@ The project was presented by the group members and addressed the following:
 
 ## Depoly website for Project 1
 ---
-[Horiseon website](https://rfox01.github.io/Group-4-Project-1/)
+[Marvel website](https://rfox01.github.io/Group-4-Project-1/)
 
 #### Screenshot of deployed page
 
