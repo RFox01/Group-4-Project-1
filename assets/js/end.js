@@ -7,7 +7,7 @@ var finalScore = localStorage.getItem("finalScore");
 var stringValue = "";
 
 //final choice display options
-function CptMarvel() {
+function cptMarvel() {
   characterImage.src = "assets/images/captainMarvel.jpg";
   characterName.innerHTML = "Captain Marvel";
   characterDesc.innerHTML =
@@ -33,7 +33,7 @@ function CptMarvel() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -67,7 +67,7 @@ function Hulk() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -101,7 +101,7 @@ function Thor() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -135,10 +135,7 @@ function DrStrange() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-
-        var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -172,7 +169,7 @@ function IronMan() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -206,7 +203,7 @@ function BlackWidow() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -214,7 +211,7 @@ function BlackWidow() {
   });
 }
 
-function HawkEye() {
+function hawkEye() {
   characterImage.src = "assets/images/hawkEye.jpg";
   characterName.innerHTML = "Hawk Eye";
   characterDesc.innerHTML =
@@ -240,7 +237,7 @@ function HawkEye() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.setAttribute("src", data.poster);
+        poster.setAttribute("src", data.Poster);
       });
     } else {
       return;
@@ -273,26 +270,15 @@ function CptAmerica() {
         var ratings = document.getElementById("ratings");
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
-        var imageUrl =
-          "img.omdbapi.com/?i=" + data.imdbID + "&apikey=" + apiKey;
-
-        fetch(imageUrl).then(function (response) {
-          if (response.ok) {
-            response.json().then(function (data) {
-              var poster = document.getElementById("poster");
-              poster.setAttribute("src", data);
-            });
-          } else {
-            return;
-          }
-        });
+        var poster = document.getElementById("poster");
+        poster.setAttribute("src", data.Poster);
       });
     }
   });
 }
 
 if (finalScore === "011") {
-  CptMarvel();
+  cptMarvel();
 } else if (finalScore === "010") {
   Hulk();
 } else if (finalScore === "000") {
@@ -304,7 +290,7 @@ if (finalScore === "011") {
 } else if (finalScore === "101") {
   BlackWidow();
 } else if (finalScore === "110") {
-  HawkEye();
+  hawkEye();
 } else if (finalScore === "111") {
   CptAmerica();
 }
