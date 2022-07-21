@@ -76,7 +76,9 @@
                   </div>
                   <!-- this will redirect to the wikipedia page with the api fetch -->
                   <button
-                    class="button is-large is-danger is-rounded is-outlined m-3"
+                    class="js-modal-trigger button is-large is-danger is-rounded is-outlined m-3"
+                    id="wiki-modal-btn"
+                    data-target="modal-js-example"
                   >
                     Read More
                   </button>
@@ -104,15 +106,24 @@
         </header>
         <section class="modal-card-body">
           <p class="image is-4by3">
-            <img
-              src="https://bulma.io/images/placeholders/1280x960.png"
-              alt="marvel character"
-              id="poster"
-            />
+            <img src="" alt="marvel character" id="poster" />
           </p>
           <p class="is-size-4 has-text-left m-3" id="actors"></p>
           <p class="is-size-4 has-text-left m-3" id="awards"></p>
           <p class="is-size-4 has-text-left m-3" id="ratings"></p>
+        </section>
+      </div>
+    </div>
+    <!-- this is the wikipedia modal that will open up with the movie info fetch from omdb -->
+    <div class="modal" id="wiki-modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title" id="movie-title"></p>
+          <button class="delete" aria-label="close" id="wiki-close"></button>
+        </header>
+        <section class="modal-card-body">
+          <!-- content goes here -->
         </section>
       </div>
     </div>

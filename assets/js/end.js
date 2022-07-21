@@ -33,8 +33,7 @@ function CptMarvel() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
@@ -68,8 +67,7 @@ function Hulk() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
@@ -83,8 +81,7 @@ function Thor() {
   characterDesc.innerHTML =
     "Like all Asgardians, Thor is incredibly long-lived and relies upon periodic consumption of the Golden Apples of Idunn to sustain his extended lifespan, which to date has lasted many millennia. Thor is physically the strongest of the Asgardians and is capable of incredible feats of strength, such as lifting the almost Earth-sized Midgard Serpent. ";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -104,14 +101,13 @@ function Thor() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
     }
   });
-  }
+}
 
 function DrStrange() {
   characterImage.src = "assets/images/drStrange.jpg";
@@ -119,8 +115,7 @@ function DrStrange() {
   characterDesc.innerHTML =
     "Doctor Strange is a practicing sorcerer who draws his powers from mystical entities such as Agamotto, Cyttorak, Ikonn, Oshtur, Raggadorr, and Watoomb, who lend their energies for spells. Strange also wields mystical artifacts including the Cloak of Levitation which enables him to fly";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -141,13 +136,15 @@ function DrStrange() {
 
         var poster = document.getElementById("poster");
         poster.textContent = data.poster;
-        // display all data in modal here
+
+        var poster = document.getElementById("poster");
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
     }
   });
-  }
+}
 
 function IronMan() {
   characterImage.src = "assets/images/ironMan.jpg";
@@ -175,14 +172,13 @@ function IronMan() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
     }
   });
-  }
+}
 
 function BlackWidow() {
   characterImage.src = "assets/images/blackWidow.jpg";
@@ -210,14 +206,13 @@ function BlackWidow() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
     }
   });
-  }
+}
 
 function HawkEye() {
   characterImage.src = "assets/images/hawkEye.jpg";
@@ -225,8 +220,7 @@ function HawkEye() {
   characterDesc.innerHTML =
     "While Clint Barton has no superhuman powers, he is at the very peak of human conditioning. He is an exceptional fencer, acrobat and marksman, having been trained from childhood in the circus and by the criminals Trick Shot and Swordsman, this includes considerable strength";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -246,14 +240,13 @@ function HawkEye() {
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
         var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        poster.setAttribute("src", data.poster);
       });
     } else {
       return;
     }
   });
-  }
+}
 
 function CptAmerica() {
   characterImage.src = "assets/images/captainAmerica.jpg";
@@ -261,8 +254,7 @@ function CptAmerica() {
   characterDesc.innerHTML =
     "Rogers' battle experience and military training make him an expert tactician and field commander, with his teammates frequently deferring to his orders in battle. The Avengers, X-Men, Fantastic Four, and other heroes choose Rogers as their leader during the Secret Wars.";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -281,15 +273,23 @@ function CptAmerica() {
         var ratings = document.getElementById("ratings");
         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
 
-        var poster = document.getElementById("poster");
-        poster.textContent = data.poster;
-        // display all data in modal here
+        var imageUrl =
+          "img.omdbapi.com/?i=" + data.imdbID + "&apikey=" + apiKey;
+
+        fetch(imageUrl).then(function (response) {
+          if (response.ok) {
+            response.json().then(function (data) {
+              var poster = document.getElementById("poster");
+              poster.setAttribute("src", data);
+            });
+          } else {
+            return;
+          }
+        });
       });
-    } else {
-      return;
     }
   });
-  }
+}
 
 if (finalScore === "011") {
   CptMarvel();
@@ -325,5 +325,24 @@ modalClose.addEventListener("click", function () {
 window.addEventListener("click", function (event) {
   if (event.target.className === "modal-background") {
     modal.style.display = "none";
+  }
+});
+
+// this is to get the Wikipedia modal to appear on button click and to close once you hit the close arrow
+var wikiModalBtn = document.getElementById("wiki-modal-btn");
+var wikiModal = document.getElementById("wiki-modal");
+var wikiModalClose = document.getElementById("wiki-close");
+
+wikiModalBtn.addEventListener("click", function () {
+  wikiModal.style.display = "block";
+});
+
+wikiModalClose.addEventListener("click", function () {
+  wikiModal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target.className === "modal-background") {
+    wikiModal.style.display = "none";
   }
 });
