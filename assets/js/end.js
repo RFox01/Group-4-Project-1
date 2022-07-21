@@ -94,3 +94,33 @@ function getCharacter() {
 
 //need to work on displaying it in the modal
 function displayInfo(data) {}
+
+// fetchWikiExtract
+
+function fetchWikiExtract(){
+  var wikiEndpoint = 'https://en.wikipedia.org/w/api.php';
+  var wikiParams = '?action=query'
+  + "&prop=extracts" // an "extract" property type being requested
+  + "&exsentences=2" // request the first 2 sentences from the wikipedia page
+  + "&elimit=1" // ...
+  + "&titles=" + ""// tells the link which specific wikipedia page to retrieve an extract from
+  + "&explaintext-1" // tells the API to provide the conent in plain text (instead of html formatting)
+  + "&format=json" //JSON format request
+  + "&formatversion=2" //Using dot notation for JSON properites
+  + "&origin=*"; //omitting this parameter causes a CORS error
+
+  var wikiLink = wikiEndpoint + wikiParams;
+  console.log(wikiLink);
+
+  fetch(wikiLink).then(function (response) {
+    if (response.ok) {
+      response.json().then(function (data) {
+        console.log(data);
+        displayInfo();
+      });
+    } else {
+      return;
+    }
+  });
+}
+
