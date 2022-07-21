@@ -13,7 +13,7 @@ function CptMarvel() {
   characterDesc.innerHTML =
     "Superhuman strength, stamina, durability, and agility. Captain Marvel can also fly at great speeds, well beyond the sound barrier. Captain Marvel also has something called a “Seventh Sense” where she can sense danger. This has also been known to give her pre-cognitive hallucinations of incoming threats.";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=CaptainMarvel&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Captain%20Marvel&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -155,8 +155,7 @@ function IronMan() {
   characterDesc.innerHTML =
     "Iron Man possesses powered armor that gives him superhuman strength and durability, flight, and an array of weapons.The weapons systems of the suit have changed over the years, but Iron Man's standard offensive weapons have always been the repulsor rays that are fired from the palms of his gauntlets.";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=IronMan&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Iron%20Man&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -191,8 +190,7 @@ function BlackWidow() {
   characterDesc.innerHTML =
     "Black Widow has been enhanced by biotechnology that makes her body resistant to aging and disease and she heals faster than the average human.Black Widow is a world-class athlete, gymnast, acrobat, and aerialist, capable of numerous complex maneuvers and feats. She can coordinate her body with balance, flexibility, and dexterity easily, and is an accomplished ballerina.";
   var apiKey = "c371f4bd";
-  var queryURL =
-    "http://www.omdbapi.com/?t=BlackWidow&apikey=" + apiKey;
+  var queryURL = "http://www.omdbapi.com/?t=Black%20Widow&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -264,7 +262,7 @@ function CptAmerica() {
     "Rogers' battle experience and military training make him an expert tactician and field commander, with his teammates frequently deferring to his orders in battle. The Avengers, X-Men, Fantastic Four, and other heroes choose Rogers as their leader during the Secret Wars.";
   var apiKey = "c371f4bd";
   var queryURL =
-    "http://www.omdbapi.com/?t=CaptainAmerica&apikey=" + apiKey;
+    "http://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -310,40 +308,6 @@ if (finalScore === "011") {
 } else if (finalScore === "111") {
   CptAmerica();
 }
-
-// // this will fetch the info we need
-// function getCharacter() {
-//   var apiKey = "c371f4bd";
-//   var queryURL =
-//     "http://www.omdbapi.com/?t=" + "Spider-Man" + "&apikey=" + apiKey;
-
-//   fetch(queryURL).then(function (response) {
-//     if (response.ok) {
-//       response.json().then(function (data) {
-//         console.log(data);
-
-//         var movieTitle = document.getElementById("movie-title");
-//         movieTitle.textContent = data.Title;
-
-//         var actors = document.getElementById("actors");
-//         actors.textContent = "Actors/Actresses: " + data.Actors;
-
-//         var awards = document.getElementById("awards");
-//         awards.textContent = "Awards: " + data.Awards;
-
-//         var ratings = document.getElementById("ratings");
-//         ratings.textContent = "Imdb Ratings: " + data.imdbRating;
-
-//         var poster = document.getElementById("poster");
-//         poster.textContent = data.poster;
-//         // display all data in modal here
-//       });
-//     } else {
-//       return;
-//     }
-//   });
-// }
-// getCharacter();
 
 // this is to get the modal to appear on button click and to close once you hit the close arrow
 var modalBtn = document.getElementById("modal-btn");
