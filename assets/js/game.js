@@ -1,6 +1,8 @@
 var question = document.getElementById("question");
 var choiceA = document.getElementById("A");
 var choiceB = document.getElementById("B");
+var answerA = document.getElementById("answerA");
+var answerB = document.getElementById("answerB");
 
 // Empty string, values will be pushed using eventListeners
 var finalScore = '';
@@ -8,44 +10,58 @@ var finalScore = '';
 // Add final questions
 function question1() {
     question.innerHTML = "Would you break the law to save someone?"; 
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/dont-break-the-law.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/break-the-law.jpg>";
+    answerA.innerHTML = "No";
+    answerB.innerHTML = "Yes";
 };
 
 function question2() {
     question.innerHTML = "Flight or Super Strength?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/flight.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/super-strength.jpg>";
+    answerA.innerHTML = "Flight";
+    answerB.innerHTML = "Super Strength";
 };
 
 function question3() {
     question.innerHTML = "Intelligence or Charisma?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/intelligence.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/charisma.jpg>";
+    answerA.innerHTML = "Intelligence";
+    answerB.innerHTML = "Charisma";
 };
 
 function question4() {
     question.innerHTML = "Super Speed or Magic?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/super-speed.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/magic.jpg>";
+    answerA.innerHTML = "Super Speed";
+    answerB.innerHTML = "Magic";
 };
 
 function question5() {
     question.innerHTML = "Regeneration or Bullet Proof Skin?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/regeneration.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/bullet-proof.jpg>";
+    answerA.innerHTML = "Regeneration";
+    answerB.innerHTML = "Bullet Proof Skin";
 };
 
 function question6() {
     question.innerHTML = "Wealth or Martial Skill?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/wealth.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/martial-skill.jpg>";
+    answerA.innerHTML = "Wealth";
+    answerB.innerHTML = "Martial Skill";
 };
 
 function question7() {
     question.innerHTML = "Espionage or Honour?";
-    choiceA.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
-    choiceB.innerHTML = "<img src=https://bulma.io/images/placeholders/1280x960.png>";
+    choiceA.innerHTML = "<img src=assets/images/espionage.jpg>";
+    choiceB.innerHTML = "<img src=assets/images/honour.jpeg>";
+    answerA.innerHTML = "Espionage";
+    answerB.innerHTML = "Honour";
 };
 
 /* Adding an event listener to the choiceA button. When the button is clicked, it will push a 0 to the
