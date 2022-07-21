@@ -4,14 +4,11 @@ var characterDesc = document.getElementById("description");
 
 // retrieve data from finalScore
 var finalScore = localStorage.getItem("finalScore");
-var stringValue = "";
 
 //final choice display options
 function cptMarvel() {
   characterImage.src = "assets/images/captainMarvel.jpg";
   characterName.innerHTML = "Captain Marvel";
-  characterDesc.innerHTML =
-    "Superhuman strength, stamina, durability, and agility. Captain Marvel can also fly at great speeds, well beyond the sound barrier. Captain Marvel also has something called a “Seventh Sense” where she can sense danger. This has also been known to give her pre-cognitive hallucinations of incoming threats.";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Captain%20Marvel&apikey=" + apiKey;
 
@@ -39,13 +36,13 @@ function cptMarvel() {
       return;
     }
   });
+  getWikiDataCORS("Captain Marvel");
+  displayWikiData("Captain Marvel");
 }
 
 function Hulk() {
   characterImage.src = "assets/images/hulk.jpg";
   characterName.innerHTML = "Hulk";
-  characterDesc.innerHTML =
-    "The Hulk possesses the potential for seemingly limitless physical strength which is influenced by his emotional state, particularly his anger.His durability, regeneration, and endurance also increase in proportion to his temper, and is also resistant to injury or damage.";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Hulk&apikey=" + apiKey;
 
@@ -73,13 +70,13 @@ function Hulk() {
       return;
     }
   });
+  getWikiDataCORS("Hulk");
+  displayWikiData("Hulk");
 }
 
 function Thor() {
   characterImage.src = "assets/images/thor.jpg";
   characterName.innerHTML = "Thor";
-  characterDesc.innerHTML =
-    "Like all Asgardians, Thor is incredibly long-lived and relies upon periodic consumption of the Golden Apples of Idunn to sustain his extended lifespan, which to date has lasted many millennia. Thor is physically the strongest of the Asgardians and is capable of incredible feats of strength, such as lifting the almost Earth-sized Midgard Serpent. ";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
 
@@ -107,13 +104,13 @@ function Thor() {
       return;
     }
   });
+  getWikiDataCORS("Thor");
+  displayWikiData("Thor");
 }
 
 function DrStrange() {
   characterImage.src = "assets/images/drStrange.jpg";
   characterName.innerHTML = "Dr. Strange";
-  characterDesc.innerHTML =
-    "Doctor Strange is a practicing sorcerer who draws his powers from mystical entities such as Agamotto, Cyttorak, Ikonn, Oshtur, Raggadorr, and Watoomb, who lend their energies for spells. Strange also wields mystical artifacts including the Cloak of Levitation which enables him to fly";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
 
@@ -141,13 +138,13 @@ function DrStrange() {
       return;
     }
   });
+  getWikiDataCORS("Dr. Strange");
+  displayWikiData("Dr. Strange");
 }
 
 function IronMan() {
   characterImage.src = "assets/images/ironMan.jpg";
   characterName.innerHTML = "Iron Man";
-  characterDesc.innerHTML =
-    "Iron Man possesses powered armor that gives him superhuman strength and durability, flight, and an array of weapons.The weapons systems of the suit have changed over the years, but Iron Man's standard offensive weapons have always been the repulsor rays that are fired from the palms of his gauntlets.";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Iron%20Man&apikey=" + apiKey;
 
@@ -175,13 +172,13 @@ function IronMan() {
       return;
     }
   });
+  getWikiDataCORS("Iron Man")
+  displayWikiData("Iron Man")
 }
 
 function BlackWidow() {
   characterImage.src = "assets/images/blackWidow.jpg";
   characterName.innerHTML = "Black Widow";
-  characterDesc.innerHTML =
-    "Black Widow has been enhanced by biotechnology that makes her body resistant to aging and disease and she heals faster than the average human.Black Widow is a world-class athlete, gymnast, acrobat, and aerialist, capable of numerous complex maneuvers and feats. She can coordinate her body with balance, flexibility, and dexterity easily, and is an accomplished ballerina.";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Black%20Widow&apikey=" + apiKey;
 
@@ -209,13 +206,13 @@ function BlackWidow() {
       return;
     }
   });
+  getWikiDataCORS("Black Widow");
+  displayWikiData("Black Widow");
 }
 
 function hawkEye() {
   characterImage.src = "assets/images/hawkEye.jpg";
   characterName.innerHTML = "Hawk Eye";
-  characterDesc.innerHTML =
-    "While Clint Barton has no superhuman powers, he is at the very peak of human conditioning. He is an exceptional fencer, acrobat and marksman, having been trained from childhood in the circus and by the criminals Trick Shot and Swordsman, this includes considerable strength";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
 
@@ -243,13 +240,13 @@ function hawkEye() {
       return;
     }
   });
+  getWikiDataCORS("Hawkeye");
+  displayWikiData("Hawkeye");
 }
 
 function CptAmerica() {
   characterImage.src = "assets/images/captainAmerica.jpg";
   characterName.innerHTML = "Captain America";
-  characterDesc.innerHTML =
-    "Rogers' battle experience and military training make him an expert tactician and field commander, with his teammates frequently deferring to his orders in battle. The Avengers, X-Men, Fantastic Four, and other heroes choose Rogers as their leader during the Secret Wars.";
   var apiKey = "c371f4bd";
   var queryURL = "http://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
 
@@ -275,6 +272,8 @@ function CptAmerica() {
       });
     }
   });
+  getWikiDataCORS("Captain America");
+  displayWikiData("Captain America");
 }
 
 if (finalScore === "011") {
@@ -332,3 +331,16 @@ window.addEventListener("click", function (event) {
     wikiModal.style.display = "none";
   }
 });
+
+function getWikiDataCORS(searchTerm) {
+  return fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchTerm}&format=json&origin=*`)
+    .then(response => response.json())
+    .then(data => data.query.search[0].snippet);
+}
+
+
+function displayWikiData(searchTerm) {
+  getWikiDataCORS(searchTerm).then(data => {
+    characterDesc.innerHTML = data;
+  });
+}
