@@ -61,6 +61,25 @@ if (finalScore === "011") {
   finalChoice8();
 }
 
+// this is to get the modal to appear on button click and to close once you hit the close arrow
+var modalBtn = document.getElementById("modal-btn");
+var modal = document.getElementById("modal-movies");
+var modalClose = document.querySelector(".delete");
+
+modalBtn.addEventListener("click", function () {
+  modal.style.display = "block";
+});
+
+modalClose.addEventListener("click", function () {
+  modal.style.display = "none";
+});
+
+window.addEventListener("click", function (event) {
+  if (event.target.className === "modal-background") {
+    modal.style.display = "none";
+  }
+});
+
 // This is a test fetch
 fetch("http://www.omdbapi.com/?t=Spider-man&apikey=c371f4bd").then(function (
   response
@@ -70,6 +89,7 @@ fetch("http://www.omdbapi.com/?t=Spider-man&apikey=c371f4bd").then(function (
     console.log(data.Actors);
     console.log(data.Poster);
     console.log(data.imdbRating);
+    console.log(data);
   });
 });
 
@@ -78,19 +98,32 @@ function getCharacter() {
   var finalCharacter = "";
   var apiKey = "c371f4bd";
   var queryURL =
-    "http://www.omdbapi.com/?t=" + finalCharacter + "&apikey=" + apiKey;
+    "http://www.omdbapi.com/?t=" + "Spider-Man" + "&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
         console.log(data);
-        displayInfo();
+
+        var movieTitle = document.getElementById("movie-title");
+        movieTitle.textContent = data.Title;
+
+        var actors = document.getElementById("actors");
+        actors.textContent = data.Actors;
+
+        var awards = document.getElementById("awards");
+        awards.textContent = data.Awards;
+
+        var ratings = document.getElementById("ratings");
+        ratings.textContent = data.imdbRating;
+
+        var poster = document.getElementById("poster");
+        poster.textContent = data.poster;
+        // display all data in modal here
       });
     } else {
       return;
     }
   });
 }
-
-//need to work on displaying it in the modal
-function displayInfo(data) {}
+getCharacter();
