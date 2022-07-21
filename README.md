@@ -34,7 +34,13 @@ The project was presented by the group members and addressed the following:
 
 ## Challenges
 
-### Link to deployed page
+## GitHub repository for Bootcamp Project 1
+---
+[Github Repo](https://github.com/RFox01/Group-4-Project-1)
+
+## Depoly website for Project 1
+---
+[Horiseon website](https://rfox01.github.io/Group-4-Project-1/)
 
 #### Screenshot of deployed page
 
