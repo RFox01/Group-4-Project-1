@@ -5,12 +5,12 @@ var characterDesc = document.getElementById("description");
 // retrieve data from finalScore
 var finalScore = localStorage.getItem("finalScore");
 
-//final choice display options
-function cptMarvel() {
+//function to get all 8 characters and retrieve their information from both APIs
+function getCptMarvel() {
   characterImage.src = "assets/images/captainMarvel.jpg";
   characterName.innerHTML = "Captain Marvel";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Captain%20Marvel&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Captain%20Marvel&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -40,11 +40,11 @@ function cptMarvel() {
   displayWikiData("Captain Marvel");
 }
 
-function Hulk() {
+function getHulk() {
   characterImage.src = "assets/images/hulk.jpg";
   characterName.innerHTML = "Hulk";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Hulk&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Hulk&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -74,11 +74,11 @@ function Hulk() {
   displayWikiData("Hulk");
 }
 
-function Thor() {
+function getThor() {
   characterImage.src = "assets/images/thor.jpg";
   characterName.innerHTML = "Thor";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -108,11 +108,11 @@ function Thor() {
   displayWikiData("Thor");
 }
 
-function DrStrange() {
+function getDrStrange() {
   characterImage.src = "assets/images/drStrange.jpg";
   characterName.innerHTML = "Dr. Strange";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -142,11 +142,11 @@ function DrStrange() {
   displayWikiData("Dr. Strange");
 }
 
-function IronMan() {
+function getIronMan() {
   characterImage.src = "assets/images/ironMan.jpg";
   characterName.innerHTML = "Iron Man";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Iron%20Man&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Iron%20Man&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -172,15 +172,15 @@ function IronMan() {
       return;
     }
   });
-  getWikiDataCORS("Iron Man")
-  displayWikiData("Iron Man")
+  getWikiDataCORS("Iron Man");
+  displayWikiData("Iron Man");
 }
 
-function BlackWidow() {
+function getBlackWidow() {
   characterImage.src = "assets/images/blackWidow.jpg";
   characterName.innerHTML = "Black Widow";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Black%20Widow&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Black%20Widow&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -210,11 +210,11 @@ function BlackWidow() {
   displayWikiData("Black Widow");
 }
 
-function hawkEye() {
+function getHawkEye() {
   characterImage.src = "assets/images/hawkEye.jpg";
   characterName.innerHTML = "Hawk Eye";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -244,11 +244,12 @@ function hawkEye() {
   displayWikiData("Hawkeye");
 }
 
-function CptAmerica() {
+function getCptAmerica() {
   characterImage.src = "assets/images/captainAmerica.jpg";
   characterName.innerHTML = "Captain America";
   var apiKey = "c371f4bd";
-  var queryURL = "http://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
+  var queryURL =
+    "https://www.omdbapi.com/?t=Captain%20America&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
@@ -277,21 +278,21 @@ function CptAmerica() {
 }
 
 if (finalScore === "011") {
-  cptMarvel();
+  getCptMarvel();
 } else if (finalScore === "010") {
-  Hulk();
+  getHulk();
 } else if (finalScore === "000") {
-  Thor();
+  getThor();
 } else if (finalScore === "001") {
-  DrStrange();
+  getDrStrange();
 } else if (finalScore === "100") {
-  IronMan();
+  getIronMan();
 } else if (finalScore === "101") {
-  BlackWidow();
+  getBlackWidow();
 } else if (finalScore === "110") {
-  hawkEye();
+  getHawkEye();
 } else if (finalScore === "111") {
-  CptAmerica();
+  getCptAmerica();
 }
 
 // this is to get the modal to appear on button click and to close once you hit the close arrow
@@ -332,15 +333,17 @@ window.addEventListener("click", function (event) {
   }
 });
 
+//this is the functiont that will fetch the Wiki API and display them on the ending page
 function getWikiDataCORS(searchTerm) {
-  return fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchTerm}&format=json&origin=*`)
-    .then(response => response.json())
-    .then(data => data.query.search[0].snippet);
+  return fetch(
+    `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchTerm}&format=json&origin=*`
+  )
+    .then((response) => response.json())
+    .then((data) => data.query.search[0].snippet);
 }
 
-
 function displayWikiData(searchTerm) {
-  getWikiDataCORS(searchTerm).then(data => {
+  getWikiDataCORS(searchTerm).then((data) => {
     characterDesc.innerHTML = data;
   });
 }
