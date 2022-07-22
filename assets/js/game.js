@@ -7,7 +7,7 @@ var answerB = document.getElementById("answerB");
 // Empty string, values will be pushed using eventListeners
 var finalScore = '';
 
-// Add final questions
+// these functions hold the questions for the quiz
 function question1() {
     question.innerHTML = "Would you break the law to save someone?"; 
     choiceA.innerHTML = "<img src=assets/images/dont-break-the-law.jpg>";
@@ -87,9 +87,9 @@ choiceB.addEventListener("click", function() {
 
 question1();
 
-/**
- * If the finalScore array is equal to a certain value, then run a certain function.
- */
+
+//  If the finalScore array is equal to a certain value, then run a certain function and saving match in the local storage
+ 
  function nextQuestion() {
     if (finalScore === '0') {
         question2();
