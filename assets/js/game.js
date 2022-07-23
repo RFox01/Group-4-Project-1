@@ -43,7 +43,7 @@ function question4() {
 function question5() {
   question.innerHTML = "Regeneration or Bullet Proof Skin?";
   choiceA.innerHTML = "<img src=assets/images/regeneration.jpeg>";
-  choiceB.innerHTML = "<img src=assets/images/bulletproof.jpng>";
+  choiceB.innerHTML = "<img src=assets/images/bulletproof.png>";
   answerA.innerHTML = "Regeneration";
   answerB.innerHTML = "Bullet Proof Skin";
 }

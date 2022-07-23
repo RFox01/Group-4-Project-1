@@ -32,10 +32,18 @@ The project was presented by the group members and addressed the following:
 
 ## What we learned
 
+This project was the opportunity to lean a lot about colloboration and how to use github as a group. We had been fetching the weather API for our previous challenge but this project deepened our understanding and practise of fetching API data with the 2 APIs we chose and had never used before.
+We used Bulma for the styling of of project and learning to use a new CSS framework was a great experience and this will definitely help when we have to implement a new one for future projects.
+
 ## Challenges
+
+Up until now we had only been using github individually so using it as a group was a challenge initially. We had some issues with branches and merging them. After 2 weeks using it we have learned a lot and feel comfortable using it collaboratively.
+Using the API was also tricky and we encountered some roadblocks during the project. We had to find a new API as one of them was not working as we initially hoped.
 
 ### Link to deployed page
 
+https://rfox01.github.io/Group-4-Project-1/
+
 #### Screenshot of deployed page
 
-![Screenshot of deployed page]()
+![Screenshot of deployed page](./assets/images/deployed-page.png)
