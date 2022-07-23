@@ -7,7 +7,7 @@ var finalScore = localStorage.getItem("finalScore");
 
 //function to get all 8 characters and retrieve their information from both APIs
 function getCptMarvel() {
-  characterImage.src = "assets/images/captainMarvel.jpg";
+  characterImage.src = "assets/images/cptMarvel.png";
   characterName.innerHTML = "Captain Marvel";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Captain%20Marvel&apikey=" + apiKey;
@@ -41,7 +41,7 @@ function getCptMarvel() {
 }
 
 function getHulk() {
-  characterImage.src = "assets/images/hulk.jpg";
+  characterImage.src = "assets/images/hulk.png";
   characterName.innerHTML = "Hulk";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Hulk&apikey=" + apiKey;
@@ -75,7 +75,7 @@ function getHulk() {
 }
 
 function getThor() {
-  characterImage.src = "assets/images/thor.jpg";
+  characterImage.src = "assets/images/thor.png";
   characterName.innerHTML = "Thor";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Thor&apikey=" + apiKey;
@@ -109,7 +109,7 @@ function getThor() {
 }
 
 function getDrStrange() {
-  characterImage.src = "assets/images/drStrange.jpg";
+  characterImage.src = "assets/images/drStrange.png";
   characterName.innerHTML = "Dr. Strange";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
@@ -143,7 +143,7 @@ function getDrStrange() {
 }
 
 function getIronMan() {
-  characterImage.src = "assets/images/ironMan.jpg";
+  characterImage.src = "assets/images/ironman.png";
   characterName.innerHTML = "Iron Man";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Iron%20Man&apikey=" + apiKey;
@@ -177,7 +177,7 @@ function getIronMan() {
 }
 
 function getBlackWidow() {
-  characterImage.src = "assets/images/blackWidow.jpg";
+  characterImage.src = "assets/images/blackwidow.png";
   characterName.innerHTML = "Black Widow";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Black%20Widow&apikey=" + apiKey;
@@ -211,7 +211,7 @@ function getBlackWidow() {
 }
 
 function getHawkEye() {
-  characterImage.src = "assets/images/hawkEye.jpg";
+  characterImage.src = "assets/images/hawkeye.png";
   characterName.innerHTML = "Hawk Eye";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
@@ -245,7 +245,7 @@ function getHawkEye() {
 }
 
 function getCptAmerica() {
-  characterImage.src = "assets/images/captainAmerica.jpg";
+  characterImage.src = "assets/images/cptamerica.png";
   characterName.innerHTML = "Captain America";
   var apiKey = "c371f4bd";
   var queryURL =
