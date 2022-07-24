@@ -333,7 +333,7 @@ window.addEventListener("click", function (event) {
   }
 });
 
-//this is the functiont that will fetch the Wiki API and display them on the ending page
+//this is the function that will fetch the Wiki API and display them on the ending page
 function getWikiDataCORS(searchTerm) {
   return fetch(
     `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchTerm}&format=json&origin=*`
