@@ -4,42 +4,46 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>My first Bulma website</title>
+    <title>Marvel Mystery Matcher</title>
     <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
 <body class="is-family-monospace">
-
-    <!-- this is tha navbar element -->
+    <!-- this is the navbar element -->
     <nav
-    class="navbar has-background-dark p-2 has-text-weight-semibold is-transparent"
-    role="navigation"
-    aria-label="main navigation"
+      class="navbar has-background-dark p-2 has-text-weight-semibold is-transparent"
+      role="navigation"
+      aria-label="main navigation"
     >
-    <div class="navbar-brand">
+      <div class="navbar-brand">
         <div class="navbar-item has-text-white is-size-3">
-            Marvel Mystery Matcher
+          Marvel Mystery Matcher
         </div>
-            <!-- this is the burger menu elements -->
+        <!-- this is the burger menu elements -->
         <a
-        role="button"
-        class="navbar-burger has-background-dark is-transparent has-text-white"
-        aria-label="menu"
-        aria-expanded="false"
+          role="button"
+          class="navbar-burger has-background-dark is-transparent has-text-white"
+          id="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
         >
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-    </a>
-</div>
-<div id="navbar" class="navbar-menu has-background-dark is-transparent">
-    <div class="navbar-end">
-        <div class="navbar-item">
-            <a class="navbar-item has-text-white is-size-4" href="./index.html"> Home </a>
-            <a class="navbar-item has-text-white is-size-4" href="./about.html"> About </a>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="navbar" class="navbar-menu has-background-dark is-transparent  has-text-white">
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="navbar-item has-text-white is-size-4" href="./index.html">
+              Home
+            </a>
+            <a class="navbar-item has-text-white is-size-4" href="./about.html">
+              About
+            </a>
+          </div>
         </div>
-    </div>
-</div>
-</nav>
+      </div>
+    </nav>
 
 <!-- this is the banner  -->
 <figure class="image">
@@ -58,15 +62,14 @@
                     <div class="card">
                         <div class="card-image">
                             <figure class="image is-4by3">
-                                <img src="./assets/images/rogue.jpg" alt="Placeholder image">
+                                <img src="./assets/images/rogue.jpg" alt="Rogue">
                             </figure>
                         </div>
                         <div class="card-content">
                             <div class="content">
                                 <p class="title has-text-danger-dark">Rosa</p> 
-                                <p class="subtitle"> Hi, I'm Rosa and the Marvel-verse is a place I visit frequently. I’m excited for you to find out more about your favourite Superhero.
-                                </p>
-                              
+                                <p class="subtitle"> Hi, I'm Rosa and the Marvel-verse is a place I visit often. Excited for you to find out about your fav Superhero.
+                                </p>                  
                             </div>
                         </div>
                     </div>
@@ -99,13 +102,13 @@
                 <div class="card">
                     <div class="card-image">
                         <figure class="image is-4by3">
-                            <img src="assets/images/sam.jpg" alt="Placeholder image">
+                            <img src="assets/images/sam.jpg" alt="Spiderman">
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="content">
                             <p class="title has-text-danger-dark">Sam</p>
-                            <p class="subtitle"> Hi there! My name is Sam, I'm a huge nerd
+                            <p class="subtitle"> Hi! My name is Sam, I'm a huge nerd
                                 and love to talk comics, thanks for using our quiz and I hope you had fun.</p>
                         </div>
                     </div>
@@ -132,6 +135,6 @@
 </div>
 </div>
 </section>
-<script type="text/javascript" src="./assets/js/script.js"></script>
+<script type="text/javascript" src="./assets/js/about.js"></script>
 </body>
 </html>
