@@ -1,9 +1,3 @@
-// Linking 'Get Started' button to questions page when clicked
-var getStartedBtn = document.getElementById("getStartedId");
-getStartedBtn.addEventListener("click", function () {
-  location.href = "./questionsindex.html";
-});
-
 // this is to make sure the hamburger menu is clickable
 
 document.addEventListener("DOMContentLoaded", () => {

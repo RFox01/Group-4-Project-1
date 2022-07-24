@@ -42,7 +42,7 @@ function question4() {
 
 function question5() {
   question.innerHTML = "Regeneration or Bullet Proof Skin?";
-  choiceA.innerHTML = "<img src=assets/images/regeneration.jpeg>";
+  choiceA.innerHTML = "<img src=assets/images/regeneration.png>";
   choiceB.innerHTML = "<img src=assets/images/bulletproof.png>";
   answerA.innerHTML = "Regeneration";
   answerB.innerHTML = "Bullet Proof Skin";
@@ -140,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const navBarMenu = document.querySelector(".navbar-menu");
   // Add a click event on each of them
   navbarBurgers.addEventListener("click", () => {
-    
     // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
     navbarBurgers.classList.toggle("is-active");
     navBarMenu.classList.toggle("is-active");
