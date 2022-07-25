@@ -15,19 +15,17 @@ function getCptMarvel() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -38,6 +36,7 @@ function getCptMarvel() {
   });
   getWikiDataCORS("Captain Marvel");
   displayWikiData("Captain Marvel");
+  getWikiLink("Captain Marvel");
 }
 
 function getHulk() {
@@ -49,19 +48,17 @@ function getHulk() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -72,6 +69,7 @@ function getHulk() {
   });
   getWikiDataCORS("Hulk");
   displayWikiData("Hulk");
+  getWikiLink("Hulk");
 }
 
 function getThor() {
@@ -83,19 +81,17 @@ function getThor() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -106,30 +102,29 @@ function getThor() {
   });
   getWikiDataCORS("Thor");
   displayWikiData("Thor");
+  getWikiLink("Thor");
 }
 
 function getDrStrange() {
   characterImage.src = "assets/images/drStrange.png";
   characterName.innerHTML = "Dr. Strange";
   var apiKey = "c371f4bd";
-  var queryURL = "https://www.omdbapi.com/?t=DrStrange&apikey=" + apiKey;
+  var queryURL = "https://www.omdbapi.com/?t=Doctor%20Strange&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -140,6 +135,7 @@ function getDrStrange() {
   });
   getWikiDataCORS("Dr. Strange");
   displayWikiData("Dr. Strange");
+  getWikiLink("Dr. Strange");
 }
 
 function getIronMan() {
@@ -151,19 +147,17 @@ function getIronMan() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -174,6 +168,7 @@ function getIronMan() {
   });
   getWikiDataCORS("Iron Man");
   displayWikiData("Iron Man");
+  getWikiLink("Iron Man");
 }
 
 function getBlackWidow() {
@@ -185,19 +180,17 @@ function getBlackWidow() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -208,30 +201,29 @@ function getBlackWidow() {
   });
   getWikiDataCORS("Black Widow");
   displayWikiData("Black Widow");
+  getWikiLink("Black Widow");
 }
 
 function getHawkEye() {
   characterImage.src = "assets/images/hawkeye.png";
-  characterName.innerHTML = "Hawk Eye";
+  characterName.innerHTML = "Hawkeye";
   var apiKey = "c371f4bd";
   var queryURL = "https://www.omdbapi.com/?t=Hawkeye&apikey=" + apiKey;
 
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
         var actors = document.getElementById("actors");
-        actors.textContent = "Actors/Actresses: " + data.Actors;
+        actors.textContent = " " + data.Actors;
 
         var awards = document.getElementById("awards");
-        awards.textContent = "Awards: " + data.Awards;
+        awards.textContent = " " + data.Awards;
 
         var ratings = document.getElementById("ratings");
-        ratings.textContent = "Imdb Ratings: " + data.imdbRating;
+        ratings.textContent = " " + data.imdbRating;
 
         var poster = document.getElementById("poster");
         poster.setAttribute("src", data.Poster);
@@ -242,6 +234,7 @@ function getHawkEye() {
   });
   getWikiDataCORS("Hawkeye");
   displayWikiData("Hawkeye");
+  getWikiLink("Hawkeye");
 }
 
 function getCptAmerica() {
@@ -254,8 +247,6 @@ function getCptAmerica() {
   fetch(queryURL).then(function (response) {
     if (response.ok) {
       response.json().then(function (data) {
-        console.log(data);
-
         var movieTitle = document.getElementById("movie-title");
         movieTitle.textContent = data.Title;
 
@@ -275,6 +266,7 @@ function getCptAmerica() {
   });
   getWikiDataCORS("Captain America");
   displayWikiData("Captain America");
+  getWikiLink("Captain America");
 }
 
 if (finalScore === "011") {
@@ -314,25 +306,6 @@ window.addEventListener("click", function (event) {
   }
 });
 
-// this is to get the Wikipedia modal to appear on button click and to close once you hit the close arrow
-var wikiModalBtn = document.getElementById("wiki-modal-btn");
-var wikiModal = document.getElementById("wiki-modal");
-var wikiModalClose = document.getElementById("wiki-close");
-
-wikiModalBtn.addEventListener("click", function () {
-  wikiModal.style.display = "block";
-});
-
-wikiModalClose.addEventListener("click", function () {
-  wikiModal.style.display = "none";
-});
-
-window.addEventListener("click", function (event) {
-  if (event.target.className === "modal-background") {
-    wikiModal.style.display = "none";
-  }
-});
-
 //this is the function that will fetch the Wiki API and display them on the ending page
 function getWikiDataCORS(searchTerm) {
   return fetch(
@@ -346,6 +319,19 @@ function displayWikiData(searchTerm) {
   getWikiDataCORS(searchTerm).then((data) => {
     characterDesc.innerHTML = data;
   });
+}
+
+function getWikiLink(searchTerm) {
+  fetch(`https://en.wikipedia.org/api/rest_v1/page/summary/${searchTerm}`).then(
+    function (response) {
+      if (response.ok) {
+        response.json().then(function (data) {
+          var wikiLink = document.getElementById("wiki-link");
+          wikiLink.setAttribute("href", data.content_urls.desktop.page);
+        });
+      }
+    }
+  );
 }
 
 // this is to make sure the hamburger menu is clickable
